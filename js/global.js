@@ -21,7 +21,7 @@ getRemainingIssues();
 let sounds;
 orcaegg.addEventListener('click', e => {
   if (!sounds) {
-    sounds = new Audio('../assets/bk.mp3');
+    sounds = new Audio('assets/bk.mp3');
     sounds.play();
   }
   else {
