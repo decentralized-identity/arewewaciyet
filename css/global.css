@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Nunito', sans-serif;
-  background: url(/images/bk.png);
+  background: url(../images/bk.png);
 }
 
 main {
