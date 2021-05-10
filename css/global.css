@@ -116,6 +116,19 @@ body > footer {
   margin: 0 0 0.4em;
 }
 
+#issues h3 a {
+  font-size: 90%;
+  margin: 0 0.25em 0 0;
+  text-decoration: none;
+}
+
+#issues h3 strong {
+  padding: 0.1em 0.35em 0.06em;
+  background: #eee;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+}
+
 #jello_orcas {
   position: relative;
   width: 80%;

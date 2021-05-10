@@ -24,7 +24,7 @@ async function getRemainingIssues(){
   issues.innerHTML = cache.issues.reduce((html, issue) => {
     return html += `
       <li>
-        <h3>${issue.title}</h3>
+        <h3><a href="${issue.url}"><strong>#${issue.number}</strong></a> ${issue.title}</h3>
         <p>${md.render(issue.body)}</p>
       </li>
     `;
