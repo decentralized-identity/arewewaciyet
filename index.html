@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/web-components/tab-panels.css">
   <link rel="stylesheet" href="css/global.css">
 
   <meta name="theme-color" content="#fafafa">
@@ -32,8 +33,8 @@
     </p>
 
     <p>
-      What's up with the Jello and Orcas? This work has been 
-      lovingly described as making a 'Killer Whale Jello Salad' 
+      What's up with the Jello and Orcas? This initiative began at IIW, 
+      where it was lovingly described as making a 'Killer Whale Jello Salad' 
       of technical and standards components that are so delicious, 
       all participants in the Verifiable Credentials ecosystem will 
       serve themselves a heaping helping to maximize interoperability.
@@ -41,7 +42,7 @@
 
     <section id="status">
       <p>
-        There are <strong id="goal_issue_count">?</strong> Issues remaining before WACI v0.1 is complete
+        There are <a show-issues href="#issues"><strong id="goal_issue_count">?</strong></a> Issues remaining before WACI v0.1 is complete
       </p>
     </section>
 
@@ -54,46 +55,65 @@
       <img class="jello-orca" src="images/orca-5.svg" />
     </section>
 
-    <dl id="specs">
-      <dt>Envelope</dt>
-      <dd>
-        <a href="https://identity.foundation/didcomm-messaging/spec/">
-          <h3>DID Comms</h3>
-          <p></p>
-        </a>
-      </dd>
-      <dd>
-        <a data-href="https://bitbucket.org/openid/connect/src/master/openid-connect-self-issued-v2-1_0.md">
-          <h3>OIDC SIOP</h3>
-          <p></p>
-        </a>
-      </dd>
-      <dt>Exchange Logic</dt>
-      <dd>
-        <a href="https://identity.foundation/presentation-exchange/spec/v1.0.0/">
-          <h3>Presentation Exchange</h3>
-          <p></p>
-        </a>
-      </dd>
-      <dt>Proof Construction</dt>
-      <dd>
-        <a href="https://w3c-ccg.github.io/ldp-bbs2020/">
-          <h3>BBS+ Credentials</h3>
-          <p></p>
-        </a>
-      </dd>
-      <dt>Status / Revocation</dt>
-      <dd>
-        <a href="https://w3c-ccg.github.io/vc-status-list-2021/">
-          <h3>Status List 2021</h3>
-          <p></p>
-        </a>
-      </dd>
-    </dl>
+    <tab-panels id="tabs" selected-index="0">
 
-    <ul id="todos">
-      
-    </ul>
+      <nav>
+        <button>Specification Stack</button>
+        <button>Remaining Issues</button>
+      </nav>
+
+      <section>
+        <h2>The WACI Specification Stack</h2>
+
+        <dl id="specs">
+          <dt>Envelope</dt>
+          <dd>
+            <a href="https://identity.foundation/didcomm-messaging/spec/">
+              <h3>DID Comms</h3>
+              <p></p>
+            </a>
+          </dd>
+          <dd>
+            <a data-href="https://bitbucket.org/openid/connect/src/master/openid-connect-self-issued-v2-1_0.md">
+              <h3>OIDC SIOP</h3>
+              <p></p>
+            </a>
+          </dd>
+          <dt>Exchange Logic</dt>
+          <dd>
+            <a href="https://identity.foundation/presentation-exchange/spec/v1.0.0/">
+              <h3>Presentation Exchange</h3>
+              <p></p>
+            </a>
+          </dd>
+          <dt>Proof Construction</dt>
+          <dd>
+            <a href="https://w3c-ccg.github.io/ldp-bbs2020/">
+              <h3>BBS+ Credentials</h3>
+              <p></p>
+            </a>
+          </dd>
+          <dt>Status / Revocation</dt>
+          <dd>
+            <a href="https://w3c-ccg.github.io/vc-status-list-2021/">
+              <h3>Status List 2021</h3>
+              <p></p>
+            </a>
+          </dd>
+        </dl>
+      </section>
+
+    
+    <section>
+
+      <h2>Issues remaining for v0.1</h2>
+
+      <ul id="issues">
+        
+      </ul>
+    </section>
+
+  </tab-panels>
 
 
   </main>
@@ -105,7 +125,8 @@
     </p>
   </footer>
 
-  <script src="js/global.js"></script>
+  <script src="js/markdown-it.min.js"></script>
+  <script src="js/global.js" type="module"></script>
 </body>
 
 </html>
