@@ -1,5 +1,5 @@
 
-import '/js/web-components/tab-panels.js';
+import './web-components/tab-panels.js';
 
 const md = window.markdownit({
   linkify: true
